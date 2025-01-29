@@ -7,11 +7,7 @@ class RPS(Enum):
     PAPER = 2
     SCISSORS = 3
     
-print(RPS(2)) 
-print(RPS.ROCK)
-print(RPS['ROCK'])
-print(RPS.ROCK.value)
-sys.exit()
+
 
 print("")
 playerchoice = input("Enter... \n1 for rock \n2 for Paper \n3 for Scissors:\n\n\n")
@@ -26,8 +22,8 @@ computerchoice= random.choice("123")
 computer = int(computerchoice)
 
 print("")
-print("You chose " + playerchoice + ".")
-print("Python chose " + computerchoice + ".")
+print("You chose " + str(RPS(player)).replace("RPS.","") + ".")
+print("Python chose " + str(RPS(computer)).replace("RPS.","")  + ".")
 print("")
 
 if player == 1 and computer == 3:
